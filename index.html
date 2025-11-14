@@ -10,11 +10,14 @@
     <link rel="stylesheet" href="style.css">
     <title>Hidden Buttons</title>
   </head>
-  <body onload="generateRandomNumber()">
-    <div id="winner"></div>
-    <button type="button" id="0" class="btn ml-5 mt-0" onclick="generateWinner()"></button>
-    <button type="button" id="1" class="btn ml-5 mt-0" onclick="generateWinner()"></button>
-    <button type="button" id="2" class="btn ml-5 mt-0" onclick="generateWinner()"></button>
+  <body>
+    <div id="form" onload="generateRandomNr()">
+        <label id="noButtons" for="noButtons">Enter the number of buttons:</label>
+        <input type="text" name="noButtons" id="nrOfButtons">
+        <input type="submit" id="generate" value="Generate" onclick="createButtons()">
+        <button onClick="window.location.reload();">Refresh Page</button>
+    </div>
+    <div id="buttons"></div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
