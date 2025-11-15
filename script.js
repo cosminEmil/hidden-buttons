@@ -6,14 +6,15 @@ function createButtons() {
         btn.id = i;
         btn.className = "btn mt-0 ml-5"
         let element = document.getElementById("buttons");
+        btn.addEventListener("click", () => {checkWinner(btn)});
         element.appendChild(btn);
-        btn.addEventListener("click", () => {
-            if (btn.id == result) {
-                btn.innerText = "Winner";
-            } else {
-                btn.innerText = "Loser";
-            }
-            console.log("btn.id -> " + btn.id + " result -> " + result);
-        });
+    }
+}
+
+function checkWinner(btn) {
+    if (btn.id == result) {
+        btn.innerText = "Winner";
+    } else {
+        btn.innerText = "Loser";
     }
 }
