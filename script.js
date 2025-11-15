@@ -9,9 +9,9 @@ function createButtons() {
         element.appendChild(btn);
         btn.addEventListener("click", () => {
             if (btn.id == result) {
-                btn.innerText = "Castigator";
+                btn.innerText = "Winner";
             } else {
-                btn.innerText = "Pierzator";
+                btn.innerText = "Loser";
             }
             console.log("btn.id -> " + btn.id + " result -> " + result);
         });
