@@ -6,12 +6,12 @@ function createButtons() {
         button.id = i;
         button.className = "btn mt-0 ml-5"
         let element = document.getElementById("buttons");
-        button.addEventListener("click", () => {checkWinner(button)});
+        button.addEventListener("click", () => {checkWinner(button, result)});
         element.appendChild(button);
     }
 }
 
-function checkWinner(button) {
+function checkWinner(button, result) {
     if (button.id == result) {
         button.innerText = "Winner";
     } else {
